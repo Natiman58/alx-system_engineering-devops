@@ -1,2 +1,2 @@
 #!/bin/bash
-sed -i "s/A , c / Z, e \g"
+tr Ac Ze 
