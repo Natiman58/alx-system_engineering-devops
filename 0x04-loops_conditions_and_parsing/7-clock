@@ -8,7 +8,7 @@ while [ $Hour -le 13 ]
 do
 	echo "Hour: $Hour"
 	Min=1
-	while [ $Min -le 60 ]
+	while [ $Min -le 59 ]
 	do
 		echo $Min
 		((Min++))
