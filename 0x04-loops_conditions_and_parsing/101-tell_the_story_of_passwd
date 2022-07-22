@@ -4,7 +4,7 @@
 # COMMAND/SHELL. USER ID's place is protected by the passcode PASSWORD, more info about the usenhere: USER ID INFO
 
 FILE="/etc/passwd"
-while IFS= read -r f1 f4 f6 f7 f3 f2 f5
+while IFS=: read -r f1 f4 f6 f7 f3 f2 f5
 do
     echo "The user $f1 is part of the $f4 gang, lives in $f6 and rides $f7. $f3's place is protected by the passcode $f2, more info about the user here: $f5"
 done < "$FILE"
