@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# A bash script that stops the process "4-to_infinity_and_beyond" without using the kill command
+# pkill will send the specified signal (by default SIGTERM) to each process instead of listing them on stdout.
+# -f to use the full command used to invoke the process.
+
+pkill -f 4-to_infinity_and_beyond
