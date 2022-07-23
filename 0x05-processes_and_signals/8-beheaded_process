@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A bash script that kills the process "7-highlander"
+# pkill is a command-line utility that sends signals to the processes of a running program based on given criteria.
+
+pkill -SIGKILL -f "7-highlander"
