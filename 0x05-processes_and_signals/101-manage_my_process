@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# A bash (init) script that manages 'manage_my_process' file
+# ${0} - is the name of the script itself
+# ${1} - the first command line argument
+# & - to run the program in the background/subshell
+# pgrep - finds the process id and When -f is set, the full command line is used.
+
+if [ "${1}" == "start" ]
+then
+    ./manage_my_process &
+    sudo touch /var/run/my_process.pid; sudo chmod 777 /var/run/my_process.pid
+    echo "$$" > /var/run/my_process.pid
+    echo "manage_my_process started"
+elif [ "${1}" == "stop" ]
+then
+	kill -9 "$(pgrep -f /manage_my_process)"
+	sudo rm /var/run/my_process.pid
+	echo "manage_my_process stopped"
+elif [ "${1}" == "restart" ]
+then
+	kill -9 "$(pgrep -f /manage_my_process)"
+	sudo rm /var/run/my_process.pid
+	./manage_my_process &
+	sudo touch /var/run/my_process.pid; sudo chmod 777 /var/run/my_process.pid
+	echo "$$" > /var/run/my_process.pid
+	echo "manage_my_process restarted"
+else
+	echo "Usage: manage_my_process {start|stop|restart}"
+fi
+
