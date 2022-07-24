@@ -23,7 +23,7 @@ int infinite_while(void)
 int main(void)
 {
 	int i;
-	pid_t zombie_pid;
+	int zombie_pid;
 
 	for (i = 0; i < 5; i++)
 	{
