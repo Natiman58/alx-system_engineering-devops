@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# A a bash script that that resolves localhost(127.0.0.1) to 127.0.0.2
+# and facebook.com to 8.8.8.8
+
+sudo cp /etc/hosts ~/hosts.new
+
+sudo sed -i 's/127.0.0.1 localhost/127.0.0.2 localhost/g' ~/hosts.new
+sudo sed -i 's/157.240.195.35 facebook.com/8.8.8.8 facebook.com/g' ~/hosts.new
+
+sudo cp -f ~/hosts.new /etc/hosts
