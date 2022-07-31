@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # A a bash script that that resolves localhost(127.0.0.1) to 127.0.0.2
-# and facebook.com to 8.8.8.8
+# and facebook.com(157.240.195.35) to 8.8.8.8
 
 sudo cp /etc/hosts ~/hosts.new
 
