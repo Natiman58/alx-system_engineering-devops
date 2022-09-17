@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+# connecting with the serve ubuntu via ssh-private
 ssh -i /home/nati/.ssh/school ubuntu@3.236.66.94
