@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# A script that install nginx web server with firewall and displays 'Hello World!'
+# A script that installs nginx web server with firewall and displays 'Hello World!'
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
-echo 'Hello World!' > /var/www/html/index.nginx-debian.html
+sudo echo 'Hello World!' > /var/www/html/index.nginx-debian.html
 sudo service nginx start
 
