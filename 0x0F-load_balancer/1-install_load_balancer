@@ -12,7 +12,7 @@ echo "frontend myfrontend
 	default_backend myservers
       backend myservers
          balance roundrobin
-         server 3448-web-01 3.236.66.94
+         server 3448-web-01 44.192.48.9
 	 server 3448-web-02 3.236.13.94" >> /etc/haproxy/haproxy.cfg
 
 service haproxy restart
