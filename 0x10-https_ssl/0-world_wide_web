@@ -16,3 +16,4 @@ print "The subdomain " SUBDOMAIN[1] " is a " $4 " record and points to " $5}'
 }
 
 subdom_info "$1" "$2"
+
