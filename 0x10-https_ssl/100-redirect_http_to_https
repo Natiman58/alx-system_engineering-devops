@@ -62,5 +62,6 @@ backend www-backend
         redirect scheme https if !{ ssl_fc }
         server 3448-web-01 44.192.48.9:80 check
         server 3448-web-02 3.236.13.94:80 check
+	http-request redirect scheme https code 301 if !{ ssl_fc }
 backend letsencrypt-backend
         server letsencrypt 127.0.0.1:54321
