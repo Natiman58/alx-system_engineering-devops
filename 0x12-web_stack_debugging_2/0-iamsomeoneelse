@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# A bash script that accepts one argument and runs the 'whoami' command
+
+command="whoami"
+
+if [ "$1" ]; then
+	echo "$1"
+else
+	echo "$command"
+fi
