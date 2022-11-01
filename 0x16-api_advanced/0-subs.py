@@ -8,6 +8,7 @@
 import requests
 import json
 
+
 def number_of_subscribers(subreddit):
     """ Queries to Reddit API
         and returns the no of subscribers to a given subreddit
