@@ -4,9 +4,9 @@
     and returns the tiles of all hot articles
 """
 
-
-import requests
 after = None
+import requests
+
 
 
 def recurse(subreddit, hot_list=[]):
