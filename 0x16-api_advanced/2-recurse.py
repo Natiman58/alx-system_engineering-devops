@@ -5,7 +5,6 @@
 """
 
 
-from re import X
 import requests
 after = None
 
@@ -17,7 +16,6 @@ def recurse(subreddit, hot_list=[]):
     global after
     headers = {'User-Agent': 'MyAPI/v0.01'}
     parameters = {'after': after}
-    
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     response = requests.get(url, headers=headers,
