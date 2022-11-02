@@ -20,7 +20,6 @@ def recurse(subreddit, hot_list=[]):
     response = requests.get(url, headers=headers,
                             allow_redirects=False, params=parameters)
     if response.status_code != 200:
-        print(None)
         return None
     nxt = response.json().get('data').get('after')
     if nxt is not None:
