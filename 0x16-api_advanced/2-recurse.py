@@ -2,6 +2,7 @@
 """
     A recursivve fuction that queries the Reddit API
     and returns the tiles of all hot articles
+    using a recursive function.
 """
 
 import requests
