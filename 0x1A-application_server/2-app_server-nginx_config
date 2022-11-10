@@ -2,6 +2,21 @@ server {
     listen 80;
     server_name localhost;
 
+    root /var/www/html;
+    location /hbnb_static/ {
+             alias /data/web_static/current/;
+             autoindex off;
+    }
+    index index.html index.htm index.nginx-debian.html;
+    rewrite ^/redirect_me https://github.com/Natiman58 permanent;
+
+    error_page 404 /custom_404.html;
+
+    location = /custom_404.html {
+             root /usr/share/nginx/html;
+             internal;
+        }
+
     location / {
         include proxy_params;
         proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
